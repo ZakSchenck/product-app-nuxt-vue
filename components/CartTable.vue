@@ -73,13 +73,38 @@ table {
   border-collapse: collapse;
   width: 800px;
   margin: 60px auto;
+  @media (max-width: 892px) {
+      width:70%;
+      margin: 0 auto;
+    }
+  tr {
+    @media (max-width: 750px) {
+      display: flex;
+      flex-direction: column;
+      &:first-child {
+      display: none;
+    }
+    }
+  }
   tr td {
     border-right: 1px solid rgb(228, 228, 228);
     height: 70px;
+    @media (max-width: 750px) {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      &:nth-child(2), :nth-child(3) {
+      display: none;
+    }
+    }
   }
   tr td img {
     width: auto;
     height: 100%;
+    @media (max-width: 750px) {
+      width: 80px;
+      height: auto;
+    }
   }
 }
 
